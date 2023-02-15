@@ -168,24 +168,6 @@ public class Task2092FindAllPeopleWithSecret
         AssertAreEqual(testCaseData.Expected, actual);
     }
 
-    private static void DebugPrint(ICollection<int> expected, ICollection<int> actual)
-    {
-        if (expected.Count != actual.Count)
-        {
-            Console.WriteLine($"{expected.Count} {actual.Count}");
-        }
-
-        var actualSet = new HashSet<int>(actual);
-
-        foreach (var i in expected)
-        {
-            if (!actualSet.Contains(i))
-            {
-                Console.WriteLine($"Not found: {i}");
-            }
-        }
-    }
-    
     private static void AssertAreEqual(ICollection<int> expected, ICollection<int> actual)
     {
         Assert.AreEqual(expected.Count, actual.Count);
@@ -209,7 +191,7 @@ public class Task2092FindAllPeopleWithSecret
         return data;
     }
     
-    public class TestCaseData
+    private class TestCaseData
     {
         public int N { get; set; }
         public int[][] Meetings { get; set; }

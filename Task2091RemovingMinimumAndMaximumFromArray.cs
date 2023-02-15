@@ -1,11 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
 
-
-namespace LeetCodeTests
-{
-}
-
 namespace LeetCodeTests
 {
     /// <summary>
